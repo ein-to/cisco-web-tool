@@ -1,0 +1,10 @@
+{% extends 'net_project/wrapper.html' %}
+{% load static %}
+{% block content %}
+    <title>Поиск заблокированного порта</title>
+    <div class="div_format">
+      <form action="{% url 'find_block_port' %}" method="get">
+      <button type="submit" class="btn-css">Найти заблокированный порт и разблокировать</button></form>
+       </p>
+      </div>
+{% endblock %}

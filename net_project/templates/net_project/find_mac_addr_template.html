@@ -1,0 +1,12 @@
+{% extends 'net_project/wrapper.html' %}
+{% load static %}
+{% block content %}
+  <title>Поиск и удаление MAC адрессов</title>
+  <div class="div_format">
+  <p>Ввод MAC адреса:<Br>
+    <form action="{% url 'find_mac_addr' %}" method="get">
+       <input name="mac_addr" class="btn-css" required/>
+    <button type="submit" class="btn-css">Найти и удалить</button></form>
+     </p>
+    </div>
+{% endblock %}

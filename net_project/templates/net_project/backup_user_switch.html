@@ -1,0 +1,7 @@
+{% extends 'net_project/wrapper.html' %}
+{% load static %}
+{% block content %}
+  <title>Пример веб-страницы</title>
+    <form action="{% url 'backup_cisco'%}">
+   <button>Снять бэкап</button>
+{% endblock %}

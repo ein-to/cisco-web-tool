@@ -1,0 +1,24 @@
+{% extends 'net_project/wrapper.html' %}
+{% load static %}
+{% block content %}
+  <title>Пример веб-страницы</title>
+  <div class="div_format">
+    <p>MAC адрес: {{ mac }}</p>
+    <p>-----------------------------</p>
+    {% if list_interface_usw1 %}
+      <p>удален на USR-SW1</p>
+      <p>интерфейсы:</p>
+      {% for l in list_interface_usw1 %}
+      <p>{{ l }}<p>
+      {% endfor %}
+    {% elif list_interface_usw2 %}
+      <p>удален на USR-SW2</p>
+      <p>интерфейсы:</p>
+      {% for l in list_interface_usw2 %}
+      <p>{{ l }}<p>
+      {% endfor %}
+    {% else %}
+      <p>не найден</p>
+    {% endif %}
+   </div>
+{% endblock %}

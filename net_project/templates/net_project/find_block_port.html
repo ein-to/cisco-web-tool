@@ -1,0 +1,20 @@
+{% extends 'net_project/wrapper.html' %}
+{% load static %}
+{% block content %}
+<title>Поиск заблокированного порта</title>
+<div class="div_format">
+  {% if port_sw1 %}
+    <p>Разблокированные порты на USR-SW1:</p>
+    {% for p in port_sw1 %}
+      <p>{{ p }}</p>
+    {% endfor %}
+  {% elif port_sw2 %}
+    <p>Разблокированные порты на USR-SW1:</p>
+    {% for p in port_sw2 %}
+      <p>{{ p }}</p>
+    {% endfor %}
+  {% else %}
+  <p>Заблокированный порт не найден</p>
+  {% endif %}
+</div>
+{% endblock %}
